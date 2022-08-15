@@ -78,16 +78,6 @@ p, li { white-space: pre-wrap; }
      </widget>
     </widget>
    </widget>
-   <widget class="GCodeGraphics" name="gcodegraphics">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>30</y>
-      <width>431</width>
-      <height>221</height>
-     </rect>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -128,12 +118,6 @@ p, li { white-space: pre-wrap; }
   </action>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>GCodeGraphics</class>
-   <extends>QWidget</extends>
-   <header>qtvcp.widgets.gcode_graphics</header>
-   <container>1</container>
-  </customwidget>
   <customwidget>
    <class>LED</class>
    <extends>QWidget</extends>
