@@ -18,7 +18,7 @@ from qtvcp import logger
 LOG = logger.getLogger(__name__)
 
 # Set the log level for this module
-#LOG.setLevel(logger.INFO) # One of DEBUG, INFO, WARNING, ERROR, CRITICAL
+LOG.setLevel(logger.INFO) # One of DEBUG, INFO, WARNING, ERROR, CRITICAL
 
 ###########################################
 # **** instantiate libraries section **** #
@@ -55,6 +55,7 @@ class HandlerClass:
         KEYBIND.add_call('Key_F12','on_keycall_F12')
 
     def processed_key_event__(self,receiver,event,is_pressed,key,code,shift,cntrl):
+        LOG.info("processed_key_event__")
         # when typing in MDI, we don't want keybinding to call functions
         # so we catch and process the events directly.
         # We do want ESC, F1 and F2 to call keybinding functions though
@@ -116,6 +117,7 @@ class HandlerClass:
     # keyboard jogging from key binding calls
     # double the rate if fast is true 
     def kb_jog(self, state, joint, direction, fast = False, linear = True):
+        LOG.info("kb_jog")
         if not STATUS.is_man_mode() or not STATUS.machine_is_on():
             return
         if linear:
@@ -137,24 +139,30 @@ class HandlerClass:
 
     # Machine control
     def on_keycall_ESTOP(self,event,state,shift,cntrl):
+        LOG.info("on_keycall_ESTOP")
         if state:
             ACTION.SET_ESTOP_STATE(STATUS.estop_is_clear())
     def on_keycall_POWER(self,event,state,shift,cntrl):
+        LOG.info("on_keycall_POWER")
         if state:
             ACTION.SET_MACHINE_STATE(not STATUS.machine_is_on())
     def on_keycall_HOME(self,event,state,shift,cntrl):
+        LOG.info("on_keycall_HOME")
         if state:
             if STATUS.is_all_homed():
                 ACTION.SET_MACHINE_UNHOMED(-1)
             else:
                 ACTION.SET_MACHINE_HOMING(-1)
     def on_keycall_ABORT(self,event,state,shift,cntrl):
+        LOG.info("on_keycall_ABORT")
         if state:
             if STATUS.stat.interp_state == linuxcnc.INTERP_IDLE:
                 self.w.close()
             else:
                 self.cmnd.abort()
     def on_keycall_F12(self,event,state,shift,cntrl):
+        LOG.info("on_keycall_F12")
+        self.w.labelStatus.setText("on_keycall_F12")
         if state:
             STYLEEDITOR.load_dialog()
 
@@ -203,4 +211,5 @@ class HandlerClass:
 ################################
 
 def get_handlers(halcomp,widgets,paths):
-     return [HandlerClass(halcomp,widgets,paths)]
+    LOG.info("get_handlers") 
+    return [HandlerClass(halcomp,widgets,paths)]

@@ -1,0 +1,153 @@
+2022-09-28 20:33:22,749 - QTvcp - INFO - Logging to: /home/taihv/linuxcnc/configs/my-qtdragron/qtdragon.log
+2022-09-28 20:33:22,750 - QTvcp - INFO - Base log level set to: 10
+2022-09-28 20:33:22,750 - QTvcp.QTVCP.QT_PSTAT - DEBUG - BASEPATH qtdragon
+2022-09-28 20:33:22,750 - QTvcp.QTVCP.QT_PSTAT - DEBUG - Checking for handler file in: /home/taihv/linuxcnc/configs/my-qtdragron/qtdragon/qtdragon_handler.py
+2022-09-28 20:33:22,751 - QTvcp.QTVCP.QT_PSTAT - INFO - Using LOCAL handler file path: /home/taihv/linuxcnc/configs/my-qtdragron/qtdragon/qtdragon_handler.py
+2022-09-28 20:33:22,751 - QTvcp.QTVCP.QT_PSTAT - DEBUG - Checking for .ui in: /home/taihv/linuxcnc/configs/my-qtdragron/qtdragon/qtdragon.ui
+2022-09-28 20:33:22,751 - QTvcp.QTVCP.QT_PSTAT - INFO - Using LOCAL ui file from: /home/taihv/linuxcnc/configs/my-qtdragron/qtdragon/qtdragon.ui
+2022-09-28 20:33:22,751 - QTvcp.QTVCP.QT_PSTAT - DEBUG - Checking for .qss in: /home/taihv/linuxcnc/configs/my-qtdragron/qtdragon/qtdragon.qss
+2022-09-28 20:33:22,752 - QTvcp.QTVCP.QT_PSTAT - INFO - Using LOCAL qss file from: /home/taihv/linuxcnc/configs/my-qtdragron/qtdragon/qtdragon.qss
+2022-09-28 20:33:22,752 - QTvcp.QTVCP.QT_PSTAT - DEBUG - Checking for .qrc in: /home/taihv/linuxcnc/configs/my-qtdragron/qtdragon/qtdragon.qrc
+2022-09-28 20:33:22,752 - QTvcp.QTVCP.QT_PSTAT - INFO - Using LOCAL qrc file from: /home/taihv/linuxcnc/configs/my-qtdragron/qtdragon/qtdragon.qrc
+2022-09-28 20:33:22,753 - QTvcp.QTVCP.QT_PSTAT - DEBUG - Checking for resources.py in: /home/taihv/linuxcnc/configs/my-qtdragron/qtvcp/screens/qtdragon/resources.py
+2022-09-28 20:33:22,753 - QTvcp.QTVCP.QT_PSTAT - INFO - Using LOCAL resources.py file from: /home/taihv/linuxcnc/configs/my-qtdragron/qtvcp/screens/qtdragon/resources.py
+2022-09-28 20:33:22,754 - QTvcp.QTVCP.QT_PSTAT - DEBUG - Checking for translation file in: /home/taihv/linuxcnc/configs/my-qtdragron/qtdragon/languages/qtdragon_en.qm
+2022-09-28 20:33:22,755 - QTvcp.QTVCP.QT_PSTAT - DEBUG - Checking for translation file in: /home/taihv/work/linuxcnc/share/qtvcp/screens/qtdragon/languages/qtdragon_en.qm
+2022-09-28 20:33:22,755 - QTvcp.QTVCP.QT_PSTAT - INFO - Using no translations, default system locale is: en
+2022-09-28 20:33:22,755 - QTvcp - INFO - Building A LinuxCNC Main Screen with: Python 3
+2022-09-28 20:33:22,756 - QTvcp - INFO - No handler file specified on command line.
+2022-09-28 20:33:22,756 - QTvcp - INFO - No HAL component base name specified on command line using: qtdragon
+2022-09-28 20:33:22,758 - QTvcp.QTVCP.QT_MAKEGUI - INFO - Qsettings file path: /home/taihv/.config/QtVcp/qtdragon.conf
+2022-09-28 20:33:22,759 - QTvcp - DEBUG - Loading the handler file.
+2022-09-28 20:33:22,759 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Adding import dir: /home/taihv/linuxcnc/configs/my-qtdragron/qtdragon
+2022-09-28 20:33:23,051 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Module 'qtdragon_handler' imported OK
+2022-09-28 20:33:23,051 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Module 'qtdragon_handler' : 'get_handlers' function found.
+2022-09-28 20:33:23,052 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Registering handlers in module qtdragon_handler object <qtdragon_handler.HandlerClass object at 0xffff5c6cf160>
+2022-09-28 20:33:23,054 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'add_status'
+2022-09-28 20:33:23,055 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'adjust_stacked_widgets'
+2022-09-28 20:33:23,056 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'all_homed'
+2022-09-28 20:33:23,057 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'back'
+2022-09-28 20:33:23,057 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_clear_status_clicked'
+2022-09-28 20:33:23,057 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_copy_file_clicked'
+2022-09-28 20:33:23,058 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_dimensions_clicked'
+2022-09-28 20:33:23,058 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_gcode_edit_clicked'
+2022-09-28 20:33:23,058 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_goto_sensor_clicked'
+2022-09-28 20:33:23,058 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_home_all_clicked'
+2022-09-28 20:33:23,058 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_home_clicked'
+2022-09-28 20:33:23,059 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_load_file_clicked'
+2022-09-28 20:33:23,059 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_m61_clicked'
+2022-09-28 20:33:23,059 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_maxv_100_clicked'
+2022-09-28 20:33:23,059 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_maxv_50_clicked'
+2022-09-28 20:33:23,059 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_ref_camera_clicked'
+2022-09-28 20:33:23,060 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_ref_laser_clicked'
+2022-09-28 20:33:23,060 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_reload_file_clicked'
+2022-09-28 20:33:23,060 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_save_status_clicked'
+2022-09-28 20:33:23,060 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_start_clicked'
+2022-09-28 20:33:23,061 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'btn_touchoff_clicked'
+2022-09-28 20:33:23,061 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'call_user_command_'
+2022-09-28 20:33:23,061 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'cam_dia_changed'
+2022-09-28 20:33:23,061 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'cam_rot_changed'
+2022-09-28 20:33:23,061 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'cam_zoom_changed'
+2022-09-28 20:33:23,061 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'chk_alpha_mode_changed'
+2022-09-28 20:33:23,062 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'chk_inhibit_selection_changed'
+2022-09-28 20:33:23,062 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'chk_override_limits_checked'
+2022-09-28 20:33:23,062 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'chk_run_from_line_checked'
+2022-09-28 20:33:23,062 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'chk_use_camera_changed'
+2022-09-28 20:33:23,062 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'chk_use_sensor_changed'
+2022-09-28 20:33:23,063 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'chk_use_virtual_changed'
+2022-09-28 20:33:23,063 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'class_patch__'
+2022-09-28 20:33:23,063 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'closing_cleanup__'
+2022-09-28 20:33:23,064 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'cmb_gcode_history_clicked'
+2022-09-28 20:33:23,064 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'dialog_return'
+2022-09-28 20:33:23,064 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'disable_pause_buttons'
+2022-09-28 20:33:23,064 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'disable_spindle_pause'
+2022-09-28 20:33:23,065 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'do_file_copy'
+2022-09-28 20:33:23,065 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'enable_auto'
+2022-09-28 20:33:23,065 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'enable_onoff'
+2022-09-28 20:33:23,065 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'file_loaded'
+2022-09-28 20:33:23,065 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'forward'
+2022-09-28 20:33:23,066 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'hard_limit_tripped'
+2022-09-28 20:33:23,066 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'init_pins'
+2022-09-28 20:33:23,066 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'init_preferences'
+2022-09-28 20:33:23,066 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'init_probe'
+2022-09-28 20:33:23,066 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'init_utils'
+2022-09-28 20:33:23,067 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'init_widgets'
+2022-09-28 20:33:23,067 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'initialized__'
+2022-09-28 20:33:23,067 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'kb_jog'
+2022-09-28 20:33:23,067 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'load_code'
+2022-09-28 20:33:23,068 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'main_tab_changed'
+2022-09-28 20:33:23,068 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'mb_errors_changed'
+2022-09-28 20:33:23,068 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'metric_mode_changed'
+2022-09-28 20:33:23,068 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'not_all_homed'
+2022-09-28 20:33:23,069 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_ABORT'
+2022-09-28 20:33:23,069 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_ANEG'
+2022-09-28 20:33:23,069 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_APOS'
+2022-09-28 20:33:23,069 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_ESTOP'
+2022-09-28 20:33:23,069 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_F11'
+2022-09-28 20:33:23,069 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_F12'
+2022-09-28 20:33:23,070 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_HOME'
+2022-09-28 20:33:23,070 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_POWER'
+2022-09-28 20:33:23,070 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_XNEG'
+2022-09-28 20:33:23,071 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_XPOS'
+2022-09-28 20:33:23,071 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_YNEG'
+2022-09-28 20:33:23,071 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_YPOS'
+2022-09-28 20:33:23,072 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_ZNEG'
+2022-09-28 20:33:23,072 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_ZPOS'
+2022-09-28 20:33:23,072 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'on_keycall_pause'
+2022-09-28 20:33:23,072 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'percent_done_changed'
+2022-09-28 20:33:23,072 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'percent_loaded_changed'
+2022-09-28 20:33:23,073 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'processed_focus_event__'
+2022-09-28 20:33:23,073 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'processed_key_event__'
+2022-09-28 20:33:23,073 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'set_button_response_state'
+2022-09-28 20:33:23,073 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'set_start_line'
+2022-09-28 20:33:23,074 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'set_style_critical'
+2022-09-28 20:33:23,074 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'set_style_default'
+2022-09-28 20:33:23,075 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'set_style_warning'
+2022-09-28 20:33:23,075 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'slider_maxv_changed'
+2022-09-28 20:33:23,075 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'slider_rapid_changed'
+2022-09-28 20:33:23,075 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'slow_button_clicked'
+2022-09-28 20:33:23,075 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'spindle_fault_changed'
+2022-09-28 20:33:23,076 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'spindle_pwr_changed'
+2022-09-28 20:33:23,076 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'stop_timer'
+2022-09-28 20:33:23,076 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'tab_utilities_changed'
+2022-09-28 20:33:23,076 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'touchoff'
+2022-09-28 20:33:23,077 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'updateProgress'
+2022-09-28 20:33:23,077 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'update_rpm'
+2022-09-28 20:33:23,077 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'update_runtimer'
+2022-09-28 20:33:23,077 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'use_keyboard'
+2022-09-28 20:33:23,078 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'user_system_changed'
+2022-09-28 20:33:23,078 - QTvcp.QTVCP.QT_MAKEGUI - DEBUG - Register callback 'writer'
+2022-09-28 20:33:23,080 - QTvcp - DEBUG - Adding the key events filter.
+2022-09-28 20:33:23,087 - QTvcp.QTVCP.QT_MAKEGUI - INFO - Imported resources.py filed: /home/taihv/linuxcnc/configs/my-qtdragron/qtvcp/screens/qtdragon/resources.py
+2022-09-28 20:33:25,825 - QTvcp.QTVCP.WIDGETS.SCREEN_OPTIONS - DEBUG - Switching to Preference File Path from INI: WORKINGFOLDER/qtdragon.pref
+2022-09-28 20:33:25,832 - QTvcp.QTVCP.QT_MAKEPINS - DEBUG - QTVCP: Parsing for HAL widgets.
+2022-09-28 20:33:25,896 - QTvcp.QTVCP.WIDGETS.DIALOG_WIDGET - WARNING - Detected hal_manualtoolchange component already loaded
+   Qtvcp recommends to allow use of it's own component by not loading the original. 
+   Qtvcp Integrated toolchange dialog will not show until then
+2022-09-28 20:33:26,430 - QTvcp.QTVCP.WIDGETS.SCREEN_OPTIONS - DEBUG - cannot add notifications to statusbar - no statusbar?:
+2022-09-28 20:33:26,434 - QTvcp.QTVCP.WIDGETS.FILE_MANAGER - DEBUG - lAST FILE PATH: /home/taihv/work/linuxcnc/nc_files
+2022-09-28 20:33:26,444 - QTvcp.QTVCP.WIDGETS.FILE_MANAGER - DEBUG - lAST FILE PATH: /home/taihv/work/linuxcnc/nc_files
+2022-09-28 20:33:26,458 - QTvcp.QTVCP.WIDGETS.JOG_INCREMENTS - DEBUG - Linear Current index: 0 Increment: 0 , selection changed Continuous
+2022-09-28 20:33:26,460 - QTvcp.QTVCP.WIDGETS.JOG_INCREMENTS - DEBUG - Angular Current index: 0 Increment: 0 , selection changed Continuous
+2022-09-28 20:33:26,464 - QTvcp.QTVCP.WIDGETS.DRO_WIDGET - DEBUG - axis number 3 not found in available-axis to joint conversion dict {0: 0, 1: 1, 2: 2} of widget: dro_axis_a
+2022-09-28 20:33:26,472 - QTvcp.QTVCP.WIDGETS.STATUS_LABEL - WARNING - lbl_maxv_percent : no option recognised
+2022-09-28 20:33:26,474 - QTvcp.QTVCP.WIDGETS.STATUS_LABEL - WARNING - lbl_max_rapid : no option recognised
+2022-09-28 20:33:26,483 - QTvcp.QTVCP.WIDGETS.STATUS_LABEL - WARNING - lbl_runtime : no option recognised
+2022-09-28 20:33:26,485 - QTvcp - DEBUG - Calling the handler file's initialized__ function
+2022-09-28 20:33:26,517 - QTvcp.QTDRAGON_HANDLER - INFO - Using Basic Probe
+2022-09-28 20:33:27,339 - QTvcp.QTVCP.LIB.QT_NGCGUI.NGCGUI - DEBUG - UI Filename: /home/taihv/work/linuxcnc/lib/python/qtvcp/lib/qt_ngcgui/ngcgui.ui
+2022-09-28 20:33:27,385 - QTvcp.QTVCP.LIB.QT_NGCGUI.NGCGUI - DEBUG - UI Filename: /home/taihv/work/linuxcnc/lib/python/qtvcp/lib/qt_ngcgui/ngcgui.ui Didn't find a path NGCGUI files
+2022-09-28 20:33:27,386 - QTvcp.QTVCP.WIDGETS.FILE_MANAGER - DEBUG - Set directory view error - no such path /media/taihv
+2022-09-28 20:33:27,867 - QTvcp.QTVCP.QT_MAKEGUI - INFO - No Handler Override file at: /home/taihv/linuxcnc/configs/my-qtdragron/.qtdragonrc
+2022-09-28 20:33:27,906 - QTvcp.QTVCP.QT_TSTAT - DEBUG - Toolfile does not exist' tool.tbl
+2022-09-28 20:33:27,906 - QTvcp.QTVCP.QT_TSTAT - DEBUG - Toolfile does not exist' tool.tbl
+2022-09-28 20:33:27,907 - QTvcp.QTVCP.WIDGETS.STATUS_LABEL - WARNING - Problem with tool file info
+2022-09-28 20:33:27,912 - QTvcp.QTVCP.QT_TSTAT - DEBUG - Toolfile does not exist' tool.tbl
+2022-09-28 20:33:27,913 - QTvcp - DEBUG - Set HAL ready.
+2022-09-28 20:33:28,348 - QTvcp - DEBUG - Show window.
+2022-09-28 20:33:28,348 - QTvcp.QTVCP.QT_MAKEPINS - DEBUG - Calculating geometry of main window using natural placement: 274 69 1290 813
+2022-09-28 20:33:28,936 - QTvcp - INFO - Postgui filename: ['qtdragon_postgui.hal']
+2022-09-28 20:33:28,993 - QTvcp - INFO - Postgui commands: None
+2022-09-28 20:33:29,001 - QTvcp - INFO - Preference path: /home/taihv/linuxcnc/configs/my-qtdragron/qtdragon.pref
+2022-09-28 20:33:29,609 - QTvcp.QTVCP.WIDGETS.GCODE_EDITOR - DEBUG - Line changed: 0
+2022-09-28 20:33:40,798 - QTvcp.QTVCP.LIB.KEYBINDINGS - DEBUG - Exception in KEYBINDING: no function name conversion for QT Event: 'Key_Any'

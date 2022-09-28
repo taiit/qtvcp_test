@@ -1,0 +1,61 @@
+
+
+# components
+loadrt siggen
+loadrt threads name1=fast fp1=0 period1=1000000 name2=slow period2=10000000
+#loadrt __fast  (not loaded by loadrt, no args saved)
+#loadrt __slow  (not loaded by loadrt, no args saved)
+loadrt hal_pi_gpio dir=65536 exclude=67010559
+# pin aliases
+# param aliases
+# signals
+# nets
+net led siggen.0.clock => hal_pi_gpio.pin-12-out
+# parameter values
+setp fast.tmax        36277
+setp hal_pi_gpio.read.tmax            0
+setp hal_pi_gpio.write.tmax        36277
+setp siggen.0.update.tmax       129572
+setp slow.tmax       129572
+# realtime thread/function links
+addf siggen.0.update slow
+addf hal_pi_gpio.write fast
+
+
+
+# Add func
+#addf siggen.0.update slow
+
+#show pin thread comp funct param
+
+#Exported Functions:
+#Owner   CodeAddr  Arg       FP   Users  Name
+# 00004  ffff882710fc  00000000  NO       0   hal_pi_gpio.read
+# 00004  ffff88271074  00000000  NO       0   hal_pi_gpio.write
+
+#loadrt threads name1=test-thread period1=1000000
+
+
+#addf hal_pi_gpio.read fast 1
+#addf hal_pi_gpio.write fast -1
+#loadusr halmeter
+#start
+#show thread
+#show param
+#show comp
+#
+
+
+
+#net led <= siggen.0.clock => hal_pi_gpio.pin-18-out
+
+#halcmd: unlinkp  hal_pi_gpio.pin-18-out
+
+#setp hal_pi_gpio.pin-12-out 1
+
+#save or save all saved.hal 
+
+
+########### SIGGEN
+# show pin
+# setp siggen.0.frequency 2
