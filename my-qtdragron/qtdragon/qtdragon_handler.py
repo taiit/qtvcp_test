@@ -75,6 +75,8 @@ class HandlerClass:
         self.reload_tool = 0
         self.last_loaded_program = ""
         self.first_turnon = True
+        
+        
         self.lineedit_list = ["work_height", "touch_height", "sensor_height", "laser_x", "laser_y",
                               "sensor_x", "sensor_y", "camera_x", "camera_y",
                               "search_vel", "probe_vel", "max_probe", "eoffset_count"]
@@ -593,7 +595,7 @@ class HandlerClass:
             return
         if not STATUS.is_auto_mode():
             self.add_status("Must be in AUTO mode to run a program", WARNING)
-            return
+            #return
         if self.w.main_tab_widget.currentIndex() != 0:
             self.add_status("Switch view mode to MAIN", WARNING)
             return
@@ -1144,8 +1146,13 @@ class HandlerClass:
             ACTION.ABORT()
 
     def on_keycall_HOME(self,event,state,shift,cntrl):
-        if state and not STATUS.is_all_homed() and self.use_keyboard():
-            ACTION.SET_MACHINE_HOMING(-1)
+    #    if state and not STATUS.is_all_homed() and self.use_keyboard():
+    #        ACTION.SET_MACHINE_HOMING(-1)
+        if state:
+            if STATUS.is_all_homed():
+                ACTION.SET_MACHINE_UNHOMED(-1)
+            else:
+                ACTION.SET_MACHINE_HOMING(-1)    
 
     def on_keycall_pause(self,event,state,shift,cntrl):
         if state and STATUS.is_auto_mode() and self.use_keyboard():

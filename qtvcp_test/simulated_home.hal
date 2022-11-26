@@ -1,0 +1,58 @@
+
+#loadrt or2 names=or2_0
+#loadrt or2 count=2 names=or2_cust_0,or2_cust_1
+loadrt or2 names=or2_0,or2_cust_0,or2_cust_1
+
+loadrt comp names=comp_x,comp_y,comp_z
+
+net Xhomeswpos => comp_x.in0
+net Yhomeswpos => comp_y.in0
+net Zhomeswpos => comp_z.in0
+
+sets Xhomeswpos 1
+sets Yhomeswpos .5
+sets Zhomeswpos 2
+
+net xpos-cmd  => comp_x.in1
+net ypos-cmd  => comp_y.in1
+net zpos-cmd  => comp_z.in1
+
+setp comp_x.hyst .02
+setp comp_y.hyst .02
+setp comp_z.hyst .02
+
+net Xhomesw <= comp_x.out
+net Yhomesw <= comp_y.out => joint.1.home-sw-in
+net Zhomesw <= comp_z.out
+
+net Xhomesw => or2_0.in0
+net Zhomesw => or2_0.in1
+net XZhomesw or2_0.out => joint.0.home-sw-in joint.2.home-sw-in
+
+addf comp_x servo-thread
+addf comp_y servo-thread
+addf comp_z servo-thread
+
+addf or2_0 servo-thread
+
+
+#taihv@picnc:~/work/linuxcnc$ cat ./configs/sim/qtvcp_screens/qtdragon/qtdragon_postgui.hal
+# net spindle-speed-limited  =>  spindle.0.speed-out-rps => spindle.0.speed-in
+# ./simulated_home.hal:37: Pin 'spindle.0.speed-out-rps' was already linked to signal 'spindle-cmd-rps'
+
+# the unlink pin commands are only used, because they are connected 
+# in core_sim.hal and we use this file to simulate
+#unlinkp iocontrol.0.tool-changed
+#unlinkp iocontrol.0.tool-prep-number
+
+#net tool-change      hal_manualtoolchange.change   <=  iocontrol.0.tool-change 
+#net tool-changed     hal_manualtoolchange.changed  <=  iocontrol.0.tool-changed
+#net tool-prep-number hal_manualtoolchange.number   <=  iocontrol.0.tool-prep-number
+
+# external offset stuff
+#net eoffset_clear    qtdragon.eoffset-clear => axis.z.eoffset-clear
+#net eoffset_count    qtdragon.eoffset-count => axis.z.eoffset-counts
+#net eoffset          qtdragon.eoffset-value <= axis.z.eoffset
+#net limited          qtdragon.led-limits-tripped <= motion.eoffset-limited
+setp axis.z.eoffset-enable 1
+setp axis.z.eoffset-scale 1.

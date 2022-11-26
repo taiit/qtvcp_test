@@ -18,9 +18,10 @@ RunFromLineDialog_play_sound = True
 RunFromLineDialog_sound_type = READY
 
 [BOOK_KEEPING]
-last_loaded_directory = /home/taihv/work/linuxcnc/nc_files
-last_loaded_file = /home/taihv/work/linuxcnc/nc_files/cds.ngc
+last_loaded_directory = /home/taihv/linuxcnc/nc_files
+last_loaded_file = /home/taihv/linuxcnc/nc_files/test.ngc
 style_QSS_Path = DEFAULT
+RecentPath_0 = /home/taihv/linuxcnc/nc_files/test.ngc
 
 [ORIGINOFFSET_SYSTEM_NAMES]
 __dialogOffsetViewWidget-G54 = User System 1
@@ -48,7 +49,7 @@ desktop_notify = True
 notify_max_msgs = 10
 shutdown_check = True
 sound_player_on = False
-mainwindow_geometry = 274 69 1290 813
+mainwindow_geometry = 0 69 1920 1011
 
 [MCH_MSG_OPTIONS]
 mchnMsg_play_sound = True
@@ -76,6 +77,7 @@ notify_start_detail = This option can be changed in the preference file
 notify_start_timeout = 5
 
 [FILEMANAGER_JUMPLIST]
+nc_files = /home/taihv/linuxcnc/nc_files
 
 [SCREEN_CONTROL_LAST_SETTING]
 gcodegraphics-user-view = p
@@ -106,7 +108,7 @@ External offsets = False
 Reload program = False
 Reload tool = False
 Use keyboard = False
-Run from line = False
+Run from line = True
 Use virtual keyboard = False
 Use tool sensor = False
 Use camera = False

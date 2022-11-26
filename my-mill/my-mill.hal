@@ -67,6 +67,7 @@ net zstep           => hal_pi_gpio.pin-38-out
 net zdir            => hal_pi_gpio.pin-40-out
 
 
+
 setp stepgen.0.position-scale [JOINT_0]SCALE
 setp stepgen.0.steplen 1
 setp stepgen.0.stepspace 0
@@ -112,3 +113,4 @@ net tool-changed iocontrol.0.tool-changed <= hal_manualtoolchange.changed
 net tool-number iocontrol.0.tool-prep-number => hal_manualtoolchange.number
 net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
 
+sets spindle-at-speed true

@@ -67,12 +67,12 @@ net zstep           => hal_pi_gpio.pin-19-out
 net zdir            => hal_pi_gpio.pin-23-out  
 
 
-setp stepgen.0.position-scale [JOINT_0]SCALE
+setp stepgen.0.position-scale 1 #[JOINT_0]SCALE # SCALE = 160.0
 setp stepgen.0.steplen 1
 setp stepgen.0.stepspace 0
-setp stepgen.0.dirhold 70000
-setp stepgen.0.dirsetup 70000
-#setp stepgen.0.maxaccel [JOINT_0]STEPGEN_MAXACCEL
+setp stepgen.0.dirhold 65000
+setp stepgen.0.dirsetup 65000
+setp stepgen.0.maxaccel 500     #[JOINT_0]STEPGEN_MAX_ACC
 net xpos-cmd joint.0.motor-pos-cmd => stepgen.0.position-cmd
 net xpos-fb stepgen.0.position-fb => joint.0.motor-pos-fb
 net xstep <= stepgen.0.step
@@ -84,7 +84,7 @@ setp stepgen.1.steplen 1
 setp stepgen.1.stepspace 0
 setp stepgen.1.dirhold 70000
 setp stepgen.1.dirsetup 70000
-#setp stepgen.1.maxaccel [JOINT_1]STEPGEN_MAXACCEL
+setp stepgen.1.maxaccel [JOINT_1]STEPGEN_MAX_ACC
 net ypos-cmd joint.1.motor-pos-cmd => stepgen.1.position-cmd
 net ypos-fb stepgen.1.position-fb => joint.1.motor-pos-fb
 net ystep <= stepgen.1.step
@@ -96,7 +96,7 @@ setp stepgen.2.steplen 1
 setp stepgen.2.stepspace 0
 setp stepgen.2.dirhold 70000
 setp stepgen.2.dirsetup 70000
-#setp stepgen.2.maxaccel [JOINT_2]STEPGEN_MAXACCEL
+setp stepgen.2.maxaccel [JOINT_2]STEPGEN_MAX_ACC
 net zpos-cmd joint.2.motor-pos-cmd => stepgen.2.position-cmd
 net zpos-fb stepgen.2.position-fb => joint.2.motor-pos-fb
 net zstep <= stepgen.2.step

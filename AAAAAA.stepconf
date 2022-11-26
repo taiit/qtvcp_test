@@ -15,7 +15,7 @@
   <property type="int" name="ascale" value="0"/>
   <property type="int" name="asteprev" value="200"/>
   <property type="int" name="axes" value="0"/>
-  <property type="eval" name="axislist" value="[]"/>
+  <property type="eval" name="axislist" value="['x', 'y', 'z']"/>
   <property type="bool" name="classicladder" value="False"/>
   <property type="bool" name="createshortcut" value="False"/>
   <property type="bool" name="createsymlink" value="False"/>
@@ -37,7 +37,7 @@
   <property type="string" name="laddername" value="custom.clp"/>
   <property type="float" name="latency" value="50000.0"/>
   <property type="eval" name="lparport" value="[]"/>
-  <property type="string" name="machinename" value="test1"/>
+  <property type="string" name="machinename" value="AAAAAA"/>
   <property type="bool" name="manualtoolchange" value="True"/>
   <property type="eval" name="md5sums" value="[]"/>
   <property type="bool" name="modbus" value="False"/>
@@ -208,12 +208,12 @@
   <property type="float" name="xmaxacc" value="750.0"/>
   <property type="float" name="xmaxlim" value="200.0"/>
   <property type="float" name="xmaxvel" value="25.0"/>
-  <property type="float" name="xmicrostep" value="16.0"/>
+  <property type="float" name="xmicrostep" value="2.0"/>
   <property type="float" name="xminlim" value="0.0"/>
   <property type="float" name="xpulleyden" value="1.0"/>
   <property type="float" name="xpulleynum" value="1.0"/>
-  <property type="float" name="xscale" value="640.0"/>
-  <property type="float" name="xsteprev" value="200.0"/>
+  <property type="float" name="xscale" value="160.0"/>
+  <property type="float" name="xsteprev" value="400.0"/>
   <property type="float" name="yhomepos" value="0.0"/>
   <property type="float" name="yhomesw" value="0.0"/>
   <property type="float" name="yhomevel" value="1.5"/>
@@ -222,17 +222,17 @@
   <property type="float" name="ymaxacc" value="750.0"/>
   <property type="float" name="ymaxlim" value="200.0"/>
   <property type="float" name="ymaxvel" value="25.0"/>
-  <property type="float" name="ymicrostep" value="2.0"/>
+  <property type="float" name="ymicrostep" value="4.0"/>
   <property type="float" name="yminlim" value="0.0"/>
   <property type="float" name="ypulleyden" value="1.0"/>
   <property type="float" name="ypulleynum" value="1.0"/>
-  <property type="float" name="yscale" value="80.0"/>
+  <property type="float" name="yscale" value="160.0"/>
   <property type="float" name="ysteprev" value="200.0"/>
   <property type="float" name="zhomepos" value="0.0"/>
   <property type="float" name="zhomesw" value="0.0"/>
   <property type="float" name="zhomevel" value="1.5"/>
   <property type="int" name="zlatchdir" value="0"/>
-  <property type="float" name="zleadscrew" value="5.0"/>
+  <property type="float" name="zleadscrew" value="10.0"/>
   <property type="float" name="zmaxacc" value="750.0"/>
   <property type="float" name="zmaxlim" value="0.0"/>
   <property type="float" name="zmaxvel" value="25.0"/>
@@ -240,6 +240,6 @@
   <property type="float" name="zminlim" value="-100.0"/>
   <property type="float" name="zpulleyden" value="1.0"/>
   <property type="float" name="zpulleynum" value="1.0"/>
-  <property type="float" name="zscale" value="80.0"/>
+  <property type="float" name="zscale" value="40.0"/>
   <property type="float" name="zsteprev" value="200.0"/>
 </stepconf>

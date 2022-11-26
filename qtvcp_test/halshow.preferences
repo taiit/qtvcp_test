@@ -1,0 +1,23 @@
+# Halshow settings
+# This file is generated automatically.
+wm geometry . 1075x779+44+106
+placeFrames 0.3301975540921919
+set ::ratio 0.3301975540921919
+set ::old_w_leftf 160
+set ::watchlist {
+    pin+compensation.enable
+    pin+compensation.reset
+    pin+qtvcp_test.pin_compensation_enable
+    pin+qtvcp_test.pin_compensation_reset
+    pin+or2_cust_0.out
+    pin+or2_cust_1.out
+    pin+or2_cust_0.in0
+    pin+or2_cust_0.in1
+}
+set ::workmode watchhal
+set ::watchInterval 100
+set ::col1_width 100
+set ::ffmts 
+set ::ifmts 
+set ::alwaysOnTop 0
+set ::autoSaveWatchlist 1

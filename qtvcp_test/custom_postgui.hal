@@ -1,0 +1,55 @@
+# Include your customized HAL commands here
+# The commands in this file are run after the AXIS GUI 
+# (including PyVCP panel) starts
+#loadrt or2 count=2 names=or2_cust_0,or2_cust_1
+loadrt sum2 names=sum2_cust_0
+loadusr -Wn compensation python compensation.py filename.txt
+
+addf or2_cust_0 servo-thread
+addf or2_cust_1 servo-thread
+addf sum2_cust_0 servo-thread
+
+#net axis.0.motor-pos-cmd => compensation.x-map
+#net axis.1.motor-pos-cmd => compensation.y-map
+
+#net xpos-cmd => compensation.x-map
+#net ypos-cmd => compensation.y-map
+
+# disable Z-axis feedback control signals
+#unlinkp stepgen.2.position-cmd
+#unlinkp axis.2.motor-pos-cmd
+#unlinkp stepgen.2.position-cmd
+#unlinkp axis.2.motor-pos-fb
+
+# reassign control and feedback signals
+#net zpos-cmd <= axis.2.motor-pos-cmd
+#net zpos-cmd => axis.2.motor-pos-fb
+
+#net zpos-cmd => sum2_cust_0.in0
+#net comp compensation.out => sum2_cust_0.in1
+#net zpos-cmd-comp sum2_cust_0.out => stepgen.2.position-cmd
+
+# we do this so that M62 P0 (digital output #1) will enable compensation
+#net dout-00 <= motion.digital-out-00 
+#net compensation_enabled <= qtvcp_test.pin_compensation_enable
+net pin_compensation_enable => or2_cust_0.in0   #net dout-00 => or2_cust_0.in0
+net pin_compensation_enable => or2_cust_0.in1
+#net pyvcp-enable pyvcp.enable => or2_cust_0.in1
+net comp-enable or2_cust_0.out => compensation.enable  
+ 
+
+# we are setting up the reset function.
+#net dout-01 <= motion.digital-out-01 
+net pin_compensation_reset => or2_cust_1.in0  #net dout-01 => or2_cust_1.in0
+#net pyvcp-reset pyvcp.reset => or2_cust_1.in1
+net pin_compensation_reset => or2_cust_1.in1
+net comp-reset or2_cust_1.out => compensation.reset  
+
+#this is how we set up the led
+#net comp-enable => pyvcp.enable-led
+#net compensation_reset => pin_compensation_reset_led #net comp-reset => pyvcp.reset-led
+#net comp-error compensation.error => pyvcp.error-led
+
+#we are setting up the display
+#net zpos-cmd-comp => pyvcp.current-z
+#net comp => pyvcp.current-comp
