@@ -3,7 +3,7 @@ loadrt [KINS]KINEMATICS
 loadrt [EMCMOT]EMCMOT base_period_nsec=[EMCMOT]BASE_PERIOD servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS
 # loadrt hal_parport cfg="0 out"
 # setp parport.0.reset-time 5000
-loadrt hal_pi_gpio dir=67108751 exclude=0
+loadrt hal_pi_gpio dir=7095392 exclude=60013467
 
 
 loadrt stepgen step_type=0,0,0
@@ -55,13 +55,16 @@ net spindle-cw <= spindle.0.forward
 # net xenable         => parport.0.pin-17-out
 
 # net SPINDLE spindle.0.on <= hal_pi_gpio.pin-10-out
-net spindle-pwm => hal_pi_gpio.pin-10-out
-net xstep           => hal_pi_gpio.pin-38-out
-net xdir            => hal_pi_gpio.pin-40-out
-net ystep           => hal_pi_gpio.pin-13-out
-net ydir            => hal_pi_gpio.pin-15-out
-net zstep           => hal_pi_gpio.pin-19-out
-net zdir            => hal_pi_gpio.pin-23-out
+net spindle-pwm     => hal_pi_gpio.pin-32-out
+
+net xstep           => hal_pi_gpio.pin-16-out
+net xdir            => hal_pi_gpio.pin-18-out
+
+net ystep           => hal_pi_gpio.pin-24-out
+net ydir            => hal_pi_gpio.pin-26-out
+
+net zstep           => hal_pi_gpio.pin-38-out
+net zdir            => hal_pi_gpio.pin-40-out
 
 
 setp stepgen.0.position-scale [JOINT_0]SCALE

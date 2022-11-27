@@ -12,18 +12,23 @@ addf sum2_cust_0 servo-thread
 #net axis.0.motor-pos-cmd => compensation.x-map
 #net axis.1.motor-pos-cmd => compensation.y-map
 
-#net xpos-cmd => compensation.x-map
-#net ypos-cmd => compensation.y-map
+net xpos-cmd => compensation.x-map
+net ypos-cmd => compensation.y-map
 
 # disable Z-axis feedback control signals
 #unlinkp stepgen.2.position-cmd
 #unlinkp axis.2.motor-pos-cmd
 #unlinkp stepgen.2.position-cmd
 #unlinkp axis.2.motor-pos-fb
+#unlinkp stepgen.2.position-cmd
+#unlinkp joint.2.motor-pos-cmd
+#unlinkp stepgen.2.position-fb
+#unlinkp joint.2.motor-pos-fb
 
 # reassign control and feedback signals
 #net zpos-cmd <= axis.2.motor-pos-cmd
 #net zpos-cmd => axis.2.motor-pos-fb
+
 
 #net zpos-cmd => sum2_cust_0.in0
 #net comp compensation.out => sum2_cust_0.in1

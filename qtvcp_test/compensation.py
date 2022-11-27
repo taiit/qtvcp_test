@@ -39,7 +39,7 @@ class Compensation :
 
 	
 	def reset(self) :
-		print("Call reset")
+		print("Call reset filename: {}".format(self.filename))
 		f = open(self.filename,"r")
 		probe_lines = f.readlines()
 
@@ -130,14 +130,16 @@ class Compensation :
 		# ok, lets we are ready, lets go 
 		h.ready()
 		last_reset = h["reset"]
+		debug_enale = True
 		try:
 			while 1:
 				try:
 					time.sleep(work_thread)
-					if h["enable"] :
+					if h["enable"] or debug_enale :
 						x=h['x-map']
 						y=h['y-map']
 						h["out"]=self.get_comp(x,y)
+						print("x:{}, y: {}, out: {}".format(x, y, h["out"]))
 					else :	
 						h["out"]=0
 					if h["reset"]  and not last_reset:
