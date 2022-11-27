@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """Copyright (C) 2020 Scott Alford, scottalford75@gmail.com
-
+             (C) 2022 Vo Huu Tai, vohuutai27@gmail.com
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU 2 General Public License as published by
 the Free Software Foundation; either version 2 of the License, or

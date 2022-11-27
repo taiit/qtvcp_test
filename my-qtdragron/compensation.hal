@@ -1,15 +1,17 @@
-# Include your customized HAL commands here
-# The commands in this file are run after the AXIS GUI (including PyVCP panel) starts
+# Compensation hal file entry
+#  load user compensation component
+#  add z probe pin
+
 loadrt not names=not-z_probe
 
 #loadusr -Wn compensation python compensation.py compensation.map
-loadusr -Wn compensation python compensation.py compensation.map cubic
+loadusr -Wn compensation python python/compensation.py compensation.map cubic
 
 addf not-z_probe servo-thread
 
-net z_probe_in      <= hal_pi_gpio.pin-07-in
-net z_probe_in      => not-z_probe.in    # active HIGH so invert it
-net z_probe-contact   not-z_probe.out   => motion.probe-input
+#net z_probe_in      <= hal_pi_gpio.pin-07-in
+#net z_probe_in      => not-z_probe.in    # active HIGH so invert it
+#net z_probe-contact   not-z_probe.out   => motion.probe-input
 
 #compensation.enable-in	bit	in	enables Z compensation
 #compensation.enable-out	bit	out	enables external offset
@@ -21,16 +23,14 @@ net z_probe-contact   not-z_probe.out   => motion.probe-input
 #compensation.z-pos	float	in	Z position command
 #compensation.fade-height	float	in	compensation will be faded out up to this value
 
-#net xpos-cmd_compensation 		<= axis.x.pos-cmd			    => compensation.x-pos
-#net ypos-cmd_compensation 		<= axis.y.pos-cmd			    => compensation.y-pos
-#net zpos-cmd_compensation		<= halui.axis.z.pos-relative	=> compensation.z-pos
+net xpos-cmd_compensation 		<= axis.x.pos-cmd			    => compensation.x-pos
+net ypos-cmd_compensation 		<= axis.y.pos-cmd			    => compensation.y-pos
+net zpos-cmd_compensation		<= halui.axis.z.pos-relative	=> compensation.z-pos
 net eoffset-enable	            <= compensation.enable-out	    => axis.z.eoffset-enable
 net eoffset-scale	            <= compensation.scale		    => axis.z.eoffset-scale
 net eoffset-counts	            <= compensation.counts 		    => axis.z.eoffset-counts
 net eoffset-clear	            <= compensation.clear 		    => axis.z.eoffset-clear
 net compensation_is_on	        <= compensation.enable-in
-
-
 
 #net eoffset-enable                 =>  pyvcp.enable-led
 #net compensation_is_on             <=  pyvcp.enable

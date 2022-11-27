@@ -5,14 +5,18 @@ placeFrames 0.3301975540921919
 set ::ratio 0.3301975540921919
 set ::old_w_leftf 160
 set ::watchlist {
-    pin+compensation.enable
-    pin+compensation.reset
     pin+qtvcp_test.pin_compensation_enable
     pin+qtvcp_test.pin_compensation_reset
     pin+or2_cust_0.out
     pin+or2_cust_1.out
     pin+or2_cust_0.in0
     pin+or2_cust_0.in1
+    pin+compensation.enable-in
+    pin+compensation.enable-out
+    pin+compensation.fade-height
+    pin+compensation.counts
+    pin+qtvcp_test.pin_compensation_enable-not
+    sig+compensation_is_on
 }
 set ::workmode watchhal
 set ::watchInterval 100

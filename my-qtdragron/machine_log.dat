@@ -1,26 +1,9 @@
---- Qtvcp Screen Started on: T7, Thg 11 12 2022 20:40:15 ---
-T712 20:40 Machine OFF
-T712 20:40 Hard limits tripped
-T712 20:40 Unexpected realtime delay on task 0 with period 100000
+--- Qtvcp Screen Started on: CN, Thg 11 27 2022 10:15:46 ---
+CN27 10:15 Machine OFF
+CN27 10:15 Hard limits tripped
+CN27 10:15 Tool 0: No Tool
+CN27 10:15 Unexpected realtime delay on task 0 with period 100000
 This Message will only display once per session.
 Run the Latency Test and resolve before continuing.
 
-T712 20:40 File not open
-T712 20:40 Machine ON
-T712 20:40 Linear move on line 0 would exceed Z's positive limit
-T712 20:40 File not open
-T712 20:40 Linear move on line 0 would exceed joint 2's positive limit
-T712 20:40 invalid params in linear command
-T712 20:40 Linear move on line 0 would exceed X's positive limit
-T712 20:40 File not open
-T712 20:40 Linear move on line 0 would exceed Y's positive limit
-T712 20:40 Linear move on line 0 would exceed joint 0's positive limit
-T712 20:40 Linear move on line 0 would exceed joint 1's positive limit
-T712 20:40 invalid params in linear command
-T712 20:40 j2 end of move in home state 7
-T712 20:40 Machine OFF
-T712 20:40 File not open
-T712 20:40 File not open
-T712 20:40 File not open
-T712 20:40 Machine ON
-T712 20:42 Machine must be is homed
+CN27 10:15 Machine ON
