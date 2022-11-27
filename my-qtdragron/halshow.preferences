@@ -1,15 +1,24 @@
 # Halshow settings
 # This file is generated automatically.
-wm geometry . 1058x828+642+56
+wm geometry . 1057x828+-75+154
 placeFrames 0.38446411012782694
 set ::ratio 0.38446411012782694
 set ::old_w_leftf 160
 set ::watchlist {
-    pin+motion.digital-out-00
-    pin+motion.digital-out-01
-    pin+motion.digital-out-02
-    pin+motion.digital-out-03
-    pin+motion.enable
+    sig+compensation_enable
+    sig+zpos-cmd_compensation
+    pin+compensation.counts
+    pin+compensation.clear
+    pin+compensation.enable-in
+    pin+compensation.enable-out
+    pin+compensation.fade-height
+    pin+compensation.scale
+    pin+compensation.x-pos
+    pin+compensation.y-pos
+    pin+compensation.z-pos
+    pin+axis.z.eoffset
+    pin+axis.z.pos-cmd
+    pin+halui.axis.z.pos-relative
 }
 set ::workmode watchhal
 set ::watchInterval 100

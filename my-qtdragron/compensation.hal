@@ -30,7 +30,7 @@ net eoffset-enable	            <= compensation.enable-out	    => axis.z.eoffset-
 net eoffset-scale	            <= compensation.scale		    => axis.z.eoffset-scale
 net eoffset-counts	            <= compensation.counts 		    => axis.z.eoffset-counts
 net eoffset-clear	            <= compensation.clear 		    => axis.z.eoffset-clear
-net compensation_is_on	        <= compensation.enable-in
+net compensation_enable	        <= qtdragon.chk_enable_compenstaion_pin   => compensation.enable-in
 
 #net eoffset-enable                 =>  pyvcp.enable-led
-#net compensation_is_on             <=  pyvcp.enable
+#net compensation_enable             <=  ui_enable_compenstaion_pin

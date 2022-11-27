@@ -3015,7 +3015,7 @@ RESET</string>
                     <enum>QFrame::Raised</enum>
                    </property>
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>9</number>
                    </property>
                    <widget class="QWidget" name="main_tab_widgetPage1">
                     <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -7287,6 +7287,16 @@ TO FILE</string>
                          </widget>
                         </item>
                         <item>
+                         <widget class="CheckBox" name="checkbox_enCompensation">
+                          <property name="text">
+                           <string>Enable Compensation</string>
+                          </property>
+                          <property name="pin_name" stdset="0">
+                           <string>chk_enable_compenstaion_pin</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
                          <spacer name="verticalSpacer_26">
                           <property name="orientation">
                            <enum>Qt::Vertical</enum>
@@ -7298,16 +7308,6 @@ TO FILE</string>
                            </size>
                           </property>
                          </spacer>
-                        </item>
-                        <item alignment="Qt::AlignHCenter">
-                         <widget class="QLabel" name="silver_dragon">
-                          <property name="text">
-                           <string/>
-                          </property>
-                          <property name="pixmap">
-                           <pixmap resource="qtdragon.qrc">:/images/images/silver_dragon.png</pixmap>
-                          </property>
-                         </widget>
                         </item>
                        </layout>
                       </widget>
@@ -7421,7 +7421,7 @@ TO FILE</string>
                            <double>0.300000000000000</double>
                           </property>
                           <property name="circle_diameter" stdset="0">
-                           <double>10.000000000000000</double>
+                           <number>10</number>
                           </property>
                           <property name="right_edge_offset" stdset="0">
                            <number>0</number>
@@ -9749,7 +9749,7 @@ BLOCK</string>
                     <double>0.200000000000000</double>
                    </property>
                    <property name="circle_diameter" stdset="0">
-                    <double>10.000000000000000</double>
+                    <number>10</number>
                    </property>
                    <property name="right_edge_offset" stdset="0">
                     <number>6</number>
@@ -14222,7 +14222,7 @@ ZERO</string>
                   <double>0.300000000000000</double>
                  </property>
                  <property name="circle_diameter" stdset="0">
-                  <double>10.000000000000000</double>
+                  <number>10</number>
                  </property>
                  <property name="right_edge_offset" stdset="0">
                   <number>6</number>
@@ -14436,7 +14436,7 @@ ZERO</string>
                   <double>0.300000000000000</double>
                  </property>
                  <property name="circle_diameter" stdset="0">
-                  <double>10.000000000000000</double>
+                  <number>10</number>
                  </property>
                  <property name="right_edge_offset" stdset="0">
                   <number>6</number>
@@ -14648,7 +14648,7 @@ ZERO</string>
                   <double>0.300000000000000</double>
                  </property>
                  <property name="circle_diameter" stdset="0">
-                  <double>10.000000000000000</double>
+                  <number>10</number>
                  </property>
                  <property name="right_edge_offset" stdset="0">
                   <number>6</number>
@@ -15376,7 +15376,7 @@ ZERO</string>
             <number>2</number>
            </property>
            <property name="text">
-            <string>07:26:30 PM</string>
+            <string>11:07:21 AM</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
@@ -15441,6 +15441,11 @@ ZERO</string>
   <customwidget>
    <class>PushButton</class>
    <extends>IndicatedPushButton</extends>
+   <header>qtvcp.widgets.simple_widgets</header>
+  </customwidget>
+  <customwidget>
+   <class>CheckBox</class>
+   <extends>QCheckBox</extends>
    <header>qtvcp.widgets.simple_widgets</header>
   </customwidget>
   <customwidget>

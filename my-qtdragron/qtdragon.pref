@@ -1,6 +1,6 @@
 [DIALOG_GEOMETRY]
 LncMessage-geometry = 910 541 321 120
-ToolChangeDialog-geometry = 910 541 346 126
+ToolChangeDialog-geometry = 910 541 346 241
 CalculatorDialog-geometry = 910 541 472 355
 
 [DIALOG_OPTIONS]
@@ -20,9 +20,9 @@ RunFromLineDialog_sound_type = READY
 
 [BOOK_KEEPING]
 last_loaded_directory = /home/taihv/linuxcnc/nc_files
-last_loaded_file = /home/taihv/linuxcnc/nc_files/Circle_10mm.ngc
+last_loaded_file = /home/taihv/linuxcnc/nc_files/aa_linux_cnc.ngc
 style_QSS_Path = DEFAULT
-RecentPath_0 = /home/taihv/linuxcnc/nc_files/Circle_10mm.ngc
+RecentPath_0 = /home/taihv/linuxcnc/nc_files/aa_linux_cnc.ngc
 
 [ORIGINOFFSET_SYSTEM_NAMES]
 __dialogOffsetViewWidget-G54 = User System 1
@@ -50,7 +50,7 @@ desktop_notify = True
 notify_max_msgs = 10
 shutdown_check = True
 sound_player_on = False
-mainwindow_geometry = 0 69 1920 1011
+mainwindow_geometry = 193 71 1677 840
 
 [MCH_MSG_OPTIONS]
 mchnMsg_play_sound = True
@@ -88,7 +88,7 @@ gcodegraphics-user-lat = 0.0
 gcodegraphics-user-lon = 0.0
 
 [CUSTOM_FORM_ENTRIES]
-Tool to load = 0
+Tool to load = 1
 Laser X = 100.0
 Laser Y = -20.0
 Sensor X = 10.0
@@ -103,7 +103,7 @@ Probe Velocity = 10.0
 Max Probe = 10.0
 Retract Distance = 10.0
 Z Safe Travel = 10.0
-Eoffset count = 5
+Eoffset count = 0
 External offsets = False
 Reload program = False
 Reload tool = False

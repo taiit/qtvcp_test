@@ -242,6 +242,8 @@ class HandlerClass:
         QHAL.newpin("eoffset-clear", QHAL.HAL_BIT, QHAL.HAL_OUT)
         QHAL.newpin("eoffset-count", QHAL.HAL_S32, QHAL.HAL_OUT)
         pin = QHAL.newpin("eoffset-value", QHAL.HAL_FLOAT, QHAL.HAL_IN)
+        # compenstation pin
+        #QHAL.newpin("ui_enable_compenstaion_pin", QHAL.HAL_BIT, QHAL.HAL_OUT)
 
     def init_preferences(self):
         if not self.w.PREFS_:
@@ -847,6 +849,12 @@ class HandlerClass:
     def chk_use_virtual_changed(self, state):
         if not state:
             self.w.stackedWidget_dro.setCurrentIndex(0)
+
+    #def chk_enable_compensation_checked(self, state):
+        #if state:
+            #self.h['ui_enable_compenstaion_pin'] = True
+        #else:
+            #self.h['ui_enable_compenstaion_pin'] = False
 
     # show ngcgui info tab (in the stackedWidget) if ngcgui utilites
     # tab is selected

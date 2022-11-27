@@ -1,9 +1,4 @@
---- Qtvcp Screen Started on: CN, Thg 11 27 2022 10:15:46 ---
-CN27 10:15 Machine OFF
-CN27 10:15 Hard limits tripped
-CN27 10:15 Tool 0: No Tool
-CN27 10:15 Unexpected realtime delay on task 0 with period 100000
-This Message will only display once per session.
-Run the Latency Test and resolve before continuing.
-
-CN27 10:15 Machine ON
+--- Qtvcp Screen Started on: CN, Thg 11 27 2022 12:18:44 ---
+CN27 12:18 Machine OFF
+CN27 12:18 Hard limits tripped
+CN27 12:18 Tool 0: No Tool
